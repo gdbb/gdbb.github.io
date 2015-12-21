@@ -1,2 +1,0 @@
-# gdbb.github.io
-blog
