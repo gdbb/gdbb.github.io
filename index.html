@@ -200,6 +200,89 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/16/解决Windows下msys-git不支持长文件名的问题/" itemprop="url">
+                  解决Windows下msys-git不支持长文件名的问题
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2016-05-16T14:46:31+08:00" content="2016-05-16">
+              2016-05-16
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>　　在Linux下编写的文件，push到github再clone到Windows下时出现了问题，在git status时出现’Filename too long’。Windows下用的是msys-git，查资料有的说msys用的是老的Windows API，不支持长文件名，但实际上是可以通过配置打开长文件名功能的。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --system core.longpaths <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>reference: <a href="http://stackoverflow.com/questions/22575662/filename-too-long-in-git-for-windows" target="_blank" rel="external">stackoverflow</a></p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/05/16/从VCF文件中提取信息/" itemprop="url">
                   从VCF文件中提取信息
                 </a>
@@ -565,7 +648,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>

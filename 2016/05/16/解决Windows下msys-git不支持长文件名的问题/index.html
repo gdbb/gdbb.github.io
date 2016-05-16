@@ -51,19 +51,22 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="description" content="在Linux下编写的文件，push到github再clone到Windows下时出现了问题，在git status时出现’Filename too long’。Windows下用的是msys-git，查资料有的说msys用的是老的Windows API，不支持长文件名，但实际上是可以通过配置打开长文件名功能的。
+1git config --system core.longpaths true
+re">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2016/05/14/hello-world/index.html">
+<meta property="og:title" content="解决Windows下msys-git不支持长文件名的问题">
+<meta property="og:url" content="http://yoursite.com/2016/05/16/解决Windows下msys-git不支持长文件名的问题/index.html">
 <meta property="og:site_name" content="Running">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2016-05-14T09:33:04.745Z">
+<meta property="og:description" content="在Linux下编写的文件，push到github再clone到Windows下时出现了问题，在git status时出现’Filename too long’。Windows下用的是msys-git，查资料有的说msys用的是老的Windows API，不支持长文件名，但实际上是可以通过配置打开长文件名功能的。
+1git config --system core.longpaths true
+re">
+<meta property="og:updated_time" content="2016-05-16T06:53:26.438Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="解决Windows下msys-git不支持长文件名的问题">
+<meta name="twitter:description" content="在Linux下编写的文件，push到github再clone到Windows下时出现了问题，在git status时出现’Filename too long’。Windows下用的是msys-git，查资料有的说msys用的是老的Windows API，不支持长文件名，但实际上是可以通过配置打开长文件名功能的。
+1git config --system core.longpaths true
+re">
 
 
 
@@ -75,7 +78,7 @@ Quick">
   };
 </script>
 
-  <title> Hello World | Running </title>
+  <title> 解决Windows下msys-git不支持长文件名的问题 | Running </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -195,7 +198,7 @@ Quick">
             
             
               
-                Hello World
+                解决Windows下msys-git不支持长文件名的问题
               
             
           </h1>
@@ -204,8 +207,8 @@ Quick">
         <div class="post-meta">
           <span class="post-time">
             發表於
-            <time itemprop="dateCreated" datetime="2016-05-14T17:33:04+08:00" content="2016-05-14">
-              2016-05-14
+            <time itemprop="dateCreated" datetime="2016-05-16T14:46:31+08:00" content="2016-05-16">
+              2016-05-16
             </time>
           </span>
 
@@ -228,15 +231,9 @@ Quick">
       
 
       
-        <span itemprop="articleBody"><p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start"><a href="#Quick_Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create_a_new_post"><a href="#Create_a_new_post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server"><a href="#Run_server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files"><a href="#Generate_static_files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites"><a href="#Deploy_to_remote_sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <span itemprop="articleBody"><p>　　在Linux下编写的文件，push到github再clone到Windows下时出现了问题，在git status时出现’Filename too long’。Windows下用的是msys-git，查资料有的说msys用的是老的Windows API，不支持长文件名，但实际上是可以通过配置打开长文件名功能的。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --system core.longpaths <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>reference: <a href="http://stackoverflow.com/questions/22575662/filename-too-long-in-git-for-windows" target="_blank" rel="external">stackoverflow</a></p>
 </span>
       
     </div>
@@ -248,17 +245,13 @@ Quick">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/12/21/python-matplotlib后端设置/" rel="next" title="python-matplotlib后端设置">
-                <i class="fa fa-chevron-left"></i> python-matplotlib后端设置
+              <a href="/2016/05/16/从VCF文件中提取信息/" rel="next" title="从VCF文件中提取信息">
+                <i class="fa fa-chevron-left"></i> 从VCF文件中提取信息
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/05/15/双系统重装Windows修复引导grub2/" rel="prev" title="双系统重装Windows修复引导grub2">
-                双系统重装Windows修复引导grub2 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -372,7 +365,7 @@ Quick">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick_Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create_a_new_post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run_server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate_static_files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy_to_remote_sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目錄</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
