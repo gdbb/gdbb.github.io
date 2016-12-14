@@ -177,6 +177,15 @@
 
     
     
+      
+      
+        
+        
+        
+      
+
+      
+    
 
     
       
@@ -200,8 +209,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/05/16/解决Windows下msys-git不支持长文件名的问题/" itemprop="url">
-                  解决Windows下msys-git不支持长文件名的问题
+                <a class="post-title-link" href="/2016/12/14/NS2安装过程遇到的问题以及解决方案/" itemprop="url">
+                  NS2安装过程遇到的问题以及解决方案.md
                 </a>
               
             
@@ -211,8 +220,8 @@
         <div class="post-meta">
           <span class="post-time">
             發表於
-            <time itemprop="dateCreated" datetime="2016-05-16T14:46:31+08:00" content="2016-05-16">
-              2016-05-16
+            <time itemprop="dateCreated" datetime="2016-12-14T16:54:36+08:00" content="2016-12-14">
+              2016-12-14
             </time>
           </span>
 
@@ -238,353 +247,18 @@
         
           <span itemprop="articleBody">
             
-              <p>　　在Linux下编写的文件，push到github再clone到Windows下时出现了问题，在git status时出现’Filename too long’。Windows下用的是msys-git，查资料有的说msys用的是老的Windows API，不支持长文件名，但实际上是可以通过配置打开长文件名功能的。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --system core.longpaths <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p>reference: <a href="http://stackoverflow.com/questions/22575662/filename-too-long-in-git-for-windows" target="_blank" rel="external">stackoverflow</a></p>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/05/16/从VCF文件中提取信息/" itemprop="url">
-                  从VCF文件中提取信息
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            發表於
-            <time itemprop="dateCreated" datetime="2016-05-16T00:48:38+08:00" content="2016-05-16">
-              2016-05-16
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>　　从手机自带的通讯录导出工具导出VCF文件后，打开发现里面中文部分变成了十六进制的编码，例如：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'=48=53'</span></span><br></pre></td></tr></table></figure>
-<p>　　利用python提取想要的信息并利用binascii模块进行转换，如</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name = binascii.a2b_hex(name)</span><br></pre></td></tr></table></figure>
-<p>　　最后完成的VCF提取工具<a href="https://github.com/gdbb/vcfInfoExtractor" target="_blank" rel="external">vcf info extractor</a></p>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/05/15/双系统重装Windows修复引导grub2/" itemprop="url">
-                  双系统重装Windows修复引导grub2
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            發表於
-            <time itemprop="dateCreated" datetime="2016-05-15T00:24:50+08:00" content="2016-05-15">
-              2016-05-15
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <h6 id="OS_uFF1AopenSuSE_Leap-42-1_Win8"><a href="#OS_uFF1AopenSuSE_Leap-42-1_Win8" class="headerlink" title="OS：openSuSE Leap-42.1 Win8"></a>OS：openSuSE Leap-42.1 Win8</h6><p>　　双系统openSUSE42.1和Win7，想要把Win7换成Win8，安装Win8，会覆盖grub2引导。于是现在U盘上装了openSUSE42.1做启动盘，以便安装完win8后修复。<br>　　主要做法是，先挂载root，再把其他分区挂载到root下面，swap无须挂载。例如：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#root</span></span><br><span class="line">mount /dev/sdax /mnt</span><br><span class="line"></span><br><span class="line"><span class="comment">#boot</span></span><br><span class="line">mount /dev/sday /mnt/boot</span><br><span class="line"></span><br><span class="line"><span class="comment">#home</span></span><br><span class="line">mount /dev/sday /mnt/home</span><br></pre></td></tr></table></figure>
-<p>　　我用的是LVM，其实做法差不多，只不过应该在/dev/mapper下找对应分区。而boot分区并不在LVM中，所以boot挂载和上面一样。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#root</span></span><br><span class="line">mount /dev/mapper/XX-root /mnt</span><br><span class="line"></span><br><span class="line"><span class="comment">#home</span></span><br><span class="line">mount /dev/mapper/XX-home /mnt/home</span><br></pre></td></tr></table></figure>
-<p>　　之后执行：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mount -t proc proc /mnt.proc</span><br><span class="line">mount --rebind sys /mnt/sys</span><br><span class="line">mount --rebind dev /mnt/dev</span><br><span class="line"></span><br><span class="line">chroot /mnt /bin/bash</span><br></pre></td></tr></table></figure>
-<p>　　生成grub2文件：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">grub2-mkconfig -o /boot/grub2/grub.cfg</span><br><span class="line"></span><br><span class="line">grub2-install /dev/sda</span><br><span class="line"></span><br><span class="line"><span class="built_in">exit</span></span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/05/14/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            發表於
-            <time itemprop="dateCreated" datetime="2016-05-14T17:33:04+08:00" content="2016-05-14">
-              2016-05-14
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start"><a href="#Quick_Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create_a_new_post"><a href="#Create_a_new_post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server"><a href="#Run_server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files"><a href="#Generate_static_files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites"><a href="#Deploy_to_remote_sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/12/21/python-matplotlib后端设置/" itemprop="url">
-                  python-matplotlib后端设置
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            發表於
-            <time itemprop="dateCreated" datetime="2015-12-21T21:46:23+08:00" content="2015-12-21">
-              2015-12-21
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <h6 id="OS_uFF1AopenSuSE_Leap-42-1"><a href="#OS_uFF1AopenSuSE_Leap-42-1" class="headerlink" title="OS：openSuSE Leap-42.1"></a>OS：openSuSE Leap-42.1</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.ptplot <span class="keyword">as</span> plt</span><br></pre></td></tr></table></figure>
-<p>　　在使用python-matplotlib模块的时候遇到了一个问题，plt.show()函数无法正常输出图像。在网上找到解决方案为修改matplotlib的配置文件，原为Agg，将其backend设置为其他即可，如Qt4Agg，TkAgg。设为Qt4Agg没有问题，输出正常。</p>
-<p>　　之后因为需要将图像的输出设为动态交互式的，而将plt.show()改为plt.draw()。注意，使用draw()而非show()是因为后者生成的窗口无法调用close()主动关闭，而前者可以。若使用plt.draw()则需要打开interactive开关，即plt.ion()。但这时又出现了无法输出图像的问题，在网上找了很久没能解决，最后尝试着再次修改了backend为TkAgg，问题成功解决。</p>
+              <h4 id="OS_uFF1AopenSuSE_Leap-42-1"><a href="#OS_uFF1AopenSuSE_Leap-42-1" class="headerlink" title="OS：openSuSE Leap-42.1"></a>OS：openSuSE Leap-42.1</h4><ul>
+<li><h5 id="can_u2019t_find_X_includes"><a href="#can_u2019t_find_X_includes" class="headerlink" title="can’t find X includes"></a>can’t find X includes</h5><p>  解决方案：</p>
+<p>  安装libxt-dev</p>
+</li>
+<li><h5 id="u2018erase_u2019_was_not_declared_in_this_scope_ns2"><a href="#u2018erase_u2019_was_not_declared_in_this_scope_ns2" class="headerlink" title="‘erase’ was not declared in this scope ns2"></a>‘erase’ was not declared in this scope ns2</h5><p>　　<br>  解决方案：</p>
+<p>  修改ls文件：ns-2.35/linkstate/ls.h </p>
+<p>  第137行</p>
+<p>  void eraseAll() { erase(baseMap::begin(), baseMap::end()); }</p>
+<p>  改为：void eraseAll() { this-&gt;erase(baseMap::begin(), baseMap::end()); }</p>
+<p>  然后重新 ./install</p>
+</li>
+</ul>
 
             
           </span>
@@ -648,7 +322,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
