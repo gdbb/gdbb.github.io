@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="git,msys-git," />
+  <meta name="keywords" content="REPL,perl," />
 
 
 
@@ -51,22 +51,16 @@
 
 
 
-<meta name="description" content="在Linux下编写的文件，push到github再clone到Windows下时出现了问题，在git status时出现’Filename too long’。Windows下用的是msys-git，查资料有的说msys用的是老的Windows API，不支持长文件名，但实际上是可以通过配置打开长文件名功能的。
-1git config --system core.longpaths true
-re">
+<meta name="description" content="Question:  I suppose Perl has a REPL for some simple inputs, but there is not. So I wonder is there a interactive form within Perl itself or I must install some other add-in or REPL programs for Perl.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="解决Windows下msys-git不支持长文件名的问题">
-<meta property="og:url" content="http://yoursite.com/2016/05/16/解决Windows下msys-git不支持长文件名的问题/index.html">
+<meta property="og:title" content="How to Run A Perl REPL">
+<meta property="og:url" content="http://yoursite.com/2016/12/15/How-to-Run-A-Perl-REPL/index.html">
 <meta property="og:site_name" content="Running">
-<meta property="og:description" content="在Linux下编写的文件，push到github再clone到Windows下时出现了问题，在git status时出现’Filename too long’。Windows下用的是msys-git，查资料有的说msys用的是老的Windows API，不支持长文件名，但实际上是可以通过配置打开长文件名功能的。
-1git config --system core.longpaths true
-re">
-<meta property="og:updated_time" content="2016-12-15T08:27:49.068Z">
+<meta property="og:description" content="Question:  I suppose Perl has a REPL for some simple inputs, but there is not. So I wonder is there a interactive form within Perl itself or I must install some other add-in or REPL programs for Perl.">
+<meta property="og:updated_time" content="2016-12-15T08:27:23.888Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="解决Windows下msys-git不支持长文件名的问题">
-<meta name="twitter:description" content="在Linux下编写的文件，push到github再clone到Windows下时出现了问题，在git status时出现’Filename too long’。Windows下用的是msys-git，查资料有的说msys用的是老的Windows API，不支持长文件名，但实际上是可以通过配置打开长文件名功能的。
-1git config --system core.longpaths true
-re">
+<meta name="twitter:title" content="How to Run A Perl REPL">
+<meta name="twitter:description" content="Question:  I suppose Perl has a REPL for some simple inputs, but there is not. So I wonder is there a interactive form within Perl itself or I must install some other add-in or REPL programs for Perl.">
 
 
 
@@ -78,7 +72,7 @@ re">
   };
 </script>
 
-  <title> 解决Windows下msys-git不支持长文件名的问题 | Running </title>
+  <title> How to Run A Perl REPL | Running </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -198,7 +192,7 @@ re">
             
             
               
-                解决Windows下msys-git不支持长文件名的问题
+                How to Run A Perl REPL
               
             
           </h1>
@@ -207,8 +201,8 @@ re">
         <div class="post-meta">
           <span class="post-time">
             發表於
-            <time itemprop="dateCreated" datetime="2016-05-16T14:46:31+08:00" content="2016-05-16">
-              2016-05-16
+            <time itemprop="dateCreated" datetime="2016-12-15T15:20:39+08:00" content="2016-12-15">
+              2016-12-15
             </time>
           </span>
 
@@ -231,9 +225,11 @@ re">
       
 
       
-        <span itemprop="articleBody"><p>　　在Linux下编写的文件，push到github再clone到Windows下时出现了问题，在git status时出现’Filename too long’。Windows下用的是msys-git，查资料有的说msys用的是老的Windows API，不支持长文件名，但实际上是可以通过配置打开长文件名功能的。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --system core.longpaths <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p>reference: <a href="http://stackoverflow.com/questions/22575662/filename-too-long-in-git-for-windows" target="_blank" rel="external">stackoverflow</a></p>
+        <span itemprop="articleBody"><h5 id="Question_3A"><a href="#Question_3A" class="headerlink" title="Question:"></a>Question:</h5><p>  I suppose Perl has a REPL for some simple inputs, but there is not. So I wonder is there a interactive form within Perl itself or I must install some other add-in or REPL programs for Perl.</p>
+<h5 id="Answer_3A"><a href="#Answer_3A" class="headerlink" title="Answer:"></a>Answer:</h5><figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">perl -de1</span><br></pre></td></tr></table></figure>
+<p>also:<br><figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">perl -d -e <span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<pre><code>There also some external implements for Perl`s REPL. Look at reference:
+</code></pre><p>reference: <a href="http://stackoverflow.com/questions/73667/how-can-i-start-an-interactive-console-for-perl" target="_blank" rel="external">stackoverflow</a></p>
 </span>
       
     </div>
@@ -242,9 +238,9 @@ re">
       
         <div class="post-tags">
           
-            <a href="/tags/git/" rel="tag">#git</a>
+            <a href="/tags/REPL/" rel="tag">#REPL</a>
           
-            <a href="/tags/msys-git/" rel="tag">#msys-git</a>
+            <a href="/tags/perl/" rel="tag">#perl</a>
           
         </div>
       
@@ -253,16 +249,16 @@ re">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/05/16/从VCF文件中提取信息/" rel="next" title="从VCF文件中提取信息">
-                <i class="fa fa-chevron-left"></i> 从VCF文件中提取信息
+              <a href="/2016/12/14/NS2安装过程遇到的问题以及解决方案/" rel="next" title="NS2安装过程遇到的问题以及解决方案.md">
+                <i class="fa fa-chevron-left"></i> NS2安装过程遇到的问题以及解决方案.md
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/12/14/hello-world/" rel="prev" title="Hello World">
-                Hello World <i class="fa fa-chevron-right"></i>
+              <a href="/2016/12/15/Tricks/" rel="prev" title="Tricks">
+                Tricks <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -377,7 +373,7 @@ re">
               
             
             
-              <p class="post-toc-empty">此文章未包含目錄</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#Question_3A"><span class="nav-number">1.</span> <span class="nav-text">Question:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Answer_3A"><span class="nav-number">2.</span> <span class="nav-text">Answer:</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
