@@ -177,6 +177,15 @@
 
     
     
+      
+      
+        
+        
+        
+      
+
+      
+    
 
     
       
@@ -416,6 +425,21 @@
 <p>  void eraseAll() { erase(baseMap::begin(), baseMap::end()); }</p>
 <p>  改为：void eraseAll() { this-&gt;erase(baseMap::begin(), baseMap::end()); }</p>
 <p>  然后重新 ./install</p>
+</li>
+</ul>
+<ul>
+<li><h5 id="u5728nam_u6587_u4EF6_u5939_u4E0B_make__u8BF4_u627E_u4E0D_u5230_X11/xmu/winutil-h"><a href="#u5728nam_u6587_u4EF6_u5939_u4E0B_make__u8BF4_u627E_u4E0D_u5230_X11/xmu/winutil-h" class="headerlink" title="在nam文件夹下 make 说找不到 X11/xmu/winutil.h"></a>在nam文件夹下 make 说找不到 X11/xmu/winutil.h</h5><p>  ns2安装好之后运行“exec nam”是提示“couldn’t execute “nam”: no such file or directory<br>”<br>  在网上查说nam没有安装好，但在ns2下的nam文件夹中编译时又提示找不到 “X11/xmu/winutil.h”</p>
+<p>  解决方案：</p>
+<p>  在32位系统中 安装  libXmu-dev</p>
+<p>  在64位系统中 安装yum  install  libXmu-devel.i686</p>
+<p>  reference：<a href="http://blog.csdn.net/zhoujunbuaa/article/details/7181785" target="_blank" rel="external">stackoverflow</a></p>
+</li>
+<li><h5 id="Tcl_u7248_u672C_u95EE_u9898"><a href="#Tcl_u7248_u672C_u95EE_u9898" class="headerlink" title="Tcl版本问题"></a>Tcl版本问题</h5><p>  nam编译安装好之后运行发现Tcl版本不对。</p>
+<p>  如下</p>
+<p>  nam:<br>  [code omitted because of length]<br>  : version conflict for package “Tcl”: have 8.6.1, need exactly 8.5.10<br>  while executing<br>  “package require -exact Tcl 8.5.10”</p>
+<p>  我印象中电脑里和Tcl有关的python（Tk有用到），但不管怎样现在需要将其替换成Tcl 8.5.10。</p>
+<p>  用update-alternatives将/usr/bin下的tclsh替换成ns2目录下的Tcl 8.5.10中的tclsh。</p>
+<p>  之后重新编译安装nam，运行nam成功。</p>
 </li>
 </ul>
 
