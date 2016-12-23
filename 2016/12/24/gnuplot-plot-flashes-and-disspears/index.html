@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="git,msys-git," />
+  <meta name="keywords" content="gnuplot," />
 
 
 
@@ -51,22 +51,19 @@
 
 
 
-<meta name="description" content="在Linux下编写的文件，push到github再clone到Windows下时出现了问题，在git status时出现’Filename too long’。Windows下用的是msys-git，查资料有的说msys用的是老的Windows API，不支持长文件名，但实际上是可以通过配置打开长文件名功能的。
-1git config --system core.longpaths true
-re">
+<meta name="description" content="OS：openSuSE Leap-42.1When I run gnuplot from the shell or a script, the resulting plot flashes by on the screen and then disappears
+Put a pause -1 after the plot command in the file, or at the file en">
 <meta property="og:type" content="article">
-<meta property="og:title" content="解决Windows下msys-git不支持长文件名的问题">
-<meta property="og:url" content="http://yoursite.com/2016/05/16/解决Windows下msys-git不支持长文件名的问题/index.html">
+<meta property="og:title" content="gnuplot: plot flashes and disspears">
+<meta property="og:url" content="http://yoursite.com/2016/12/24/gnuplot-plot-flashes-and-disspears/index.html">
 <meta property="og:site_name" content="Running">
-<meta property="og:description" content="在Linux下编写的文件，push到github再clone到Windows下时出现了问题，在git status时出现’Filename too long’。Windows下用的是msys-git，查资料有的说msys用的是老的Windows API，不支持长文件名，但实际上是可以通过配置打开长文件名功能的。
-1git config --system core.longpaths true
-re">
-<meta property="og:updated_time" content="2016-12-15T08:27:49.068Z">
+<meta property="og:description" content="OS：openSuSE Leap-42.1When I run gnuplot from the shell or a script, the resulting plot flashes by on the screen and then disappears
+Put a pause -1 after the plot command in the file, or at the file en">
+<meta property="og:updated_time" content="2016-12-23T17:45:36.291Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="解决Windows下msys-git不支持长文件名的问题">
-<meta name="twitter:description" content="在Linux下编写的文件，push到github再clone到Windows下时出现了问题，在git status时出现’Filename too long’。Windows下用的是msys-git，查资料有的说msys用的是老的Windows API，不支持长文件名，但实际上是可以通过配置打开长文件名功能的。
-1git config --system core.longpaths true
-re">
+<meta name="twitter:title" content="gnuplot: plot flashes and disspears">
+<meta name="twitter:description" content="OS：openSuSE Leap-42.1When I run gnuplot from the shell or a script, the resulting plot flashes by on the screen and then disappears
+Put a pause -1 after the plot command in the file, or at the file en">
 
 
 
@@ -78,7 +75,7 @@ re">
   };
 </script>
 
-  <title> 解决Windows下msys-git不支持长文件名的问题 | Running </title>
+  <title> gnuplot: plot flashes and disspears | Running </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -198,7 +195,7 @@ re">
             
             
               
-                解决Windows下msys-git不支持长文件名的问题
+                gnuplot: plot flashes and disspears
               
             
           </h1>
@@ -207,8 +204,8 @@ re">
         <div class="post-meta">
           <span class="post-time">
             Posté le
-            <time itemprop="dateCreated" datetime="2016-05-16T14:46:31+08:00" content="2016-05-16">
-              2016-05-16
+            <time itemprop="dateCreated" datetime="2016-12-24T00:39:46+08:00" content="2016-12-24">
+              2016-12-24
             </time>
           </span>
 
@@ -231,9 +228,14 @@ re">
       
 
       
-        <span itemprop="articleBody"><p>　　在Linux下编写的文件，push到github再clone到Windows下时出现了问题，在git status时出现’Filename too long’。Windows下用的是msys-git，查资料有的说msys用的是老的Windows API，不支持长文件名，但实际上是可以通过配置打开长文件名功能的。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --system core.longpaths <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p>reference: <a href="http://stackoverflow.com/questions/22575662/filename-too-long-in-git-for-windows" target="_blank" rel="external">stackoverflow</a></p>
+        <span itemprop="articleBody"><h6 id="OS_uFF1AopenSuSE_Leap-42-1"><a href="#OS_uFF1AopenSuSE_Leap-42-1" class="headerlink" title="OS：openSuSE Leap-42.1"></a>OS：openSuSE Leap-42.1</h6><h5 id="When_I_run_gnuplot_from_the_shell_or_a_script_2C_the_resulting_plot_flashes_by_on_the_screen_and_then_disappears"><a href="#When_I_run_gnuplot_from_the_shell_or_a_script_2C_the_resulting_plot_flashes_by_on_the_screen_and_then_disappears" class="headerlink" title="When I run gnuplot from the shell or a script, the resulting plot flashes by on the screen and then disappears"></a>When I run gnuplot from the shell or a script, the resulting plot flashes by on the screen and then disappears</h5><ol>
+<li>Put a pause -1 after the plot command in the file, or at the file end.</li>
+<li>Use command gnuplot filename.gp - (yes, dash is the last parameter) to stay in the interactive  regime when the script completes.</li>
+<li>Run gnuplot as gnuplot -persist</li>
+<li>On Windows you can also use either -persist or /noend.</li>
+<li>Give the persist option as part of the set terminal command.</li>
+</ol>
+<p>reference: <a href="http://www.gnuplot.info/faq/faq.html#x1-820007.4" target="_blank" rel="external">gnuplot FAQ 7.4</a></p>
 </span>
       
     </div>
@@ -242,9 +244,7 @@ re">
       
         <div class="post-tags">
           
-            <a href="/tags/git/" rel="tag">#git</a>
-          
-            <a href="/tags/msys-git/" rel="tag">#msys-git</a>
+            <a href="/tags/gnuplot/" rel="tag">#gnuplot</a>
           
         </div>
       
@@ -253,17 +253,13 @@ re">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/05/16/从VCF文件中提取信息/" rel="next" title="从VCF文件中提取信息">
-                <i class="fa fa-chevron-left"></i> 从VCF文件中提取信息
+              <a href="/2016/12/15/Tricks/" rel="next" title="Tricks">
+                <i class="fa fa-chevron-left"></i> Tricks
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/14/hello-world/" rel="prev" title="Hello World">
-                Hello World <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -377,7 +373,7 @@ re">
               
             
             
-              <p class="post-toc-empty">This post does not have a Table Of Contents</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#OS_uFF1AopenSuSE_Leap-42-1"><span class="nav-number">1.</span> <span class="nav-text">OS：openSuSE Leap-42.1</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#When_I_run_gnuplot_from_the_shell_or_a_script_2C_the_resulting_plot_flashes_by_on_the_screen_and_then_disappears"><span class="nav-number"></span> <span class="nav-text">When I run gnuplot from the shell or a script, the resulting plot flashes by on the screen and then disappears</span></a></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
