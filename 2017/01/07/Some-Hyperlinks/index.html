@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="grub2,双系统," />
+  <meta name="keywords" content="links,miscellaneous," />
 
 
 
@@ -51,19 +51,16 @@
 
 
 
-<meta name="description" content="OS：openSuSE Leap-42.1 Win8　　双系统openSUSE42.1和Win7，想要把Win7换成Win8，安装Win8，会覆盖grub2引导。于是现在U盘上装了openSUSE42.1做启动盘，以便安装完win8后修复。　　主要做法是，先挂载root，再把其他分区挂载到root下面，swap无须挂载。例如：
-12345678#rootmount /dev/sdax /mnt#b">
+<meta name="description" content="hyperlinks of miscellaneous contentsGit 常用的几种处理大型二进制文件的组件">
 <meta property="og:type" content="article">
-<meta property="og:title" content="双系统重装Windows修复引导grub2">
-<meta property="og:url" content="http://yoursite.com/2016/05/15/双系统重装Windows修复引导grub2/index.html">
+<meta property="og:title" content="Some Hyperlinks">
+<meta property="og:url" content="http://yoursite.com/2017/01/07/Some-Hyperlinks/index.html">
 <meta property="og:site_name" content="Running">
-<meta property="og:description" content="OS：openSuSE Leap-42.1 Win8　　双系统openSUSE42.1和Win7，想要把Win7换成Win8，安装Win8，会覆盖grub2引导。于是现在U盘上装了openSUSE42.1做启动盘，以便安装完win8后修复。　　主要做法是，先挂载root，再把其他分区挂载到root下面，swap无须挂载。例如：
-12345678#rootmount /dev/sdax /mnt#b">
-<meta property="og:updated_time" content="2016-12-15T08:27:57.236Z">
+<meta property="og:description" content="hyperlinks of miscellaneous contentsGit 常用的几种处理大型二进制文件的组件">
+<meta property="og:updated_time" content="2017-01-06T17:34:39.977Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="双系统重装Windows修复引导grub2">
-<meta name="twitter:description" content="OS：openSuSE Leap-42.1 Win8　　双系统openSUSE42.1和Win7，想要把Win7换成Win8，安装Win8，会覆盖grub2引导。于是现在U盘上装了openSUSE42.1做启动盘，以便安装完win8后修复。　　主要做法是，先挂载root，再把其他分区挂载到root下面，swap无须挂载。例如：
-12345678#rootmount /dev/sdax /mnt#b">
+<meta name="twitter:title" content="Some Hyperlinks">
+<meta name="twitter:description" content="hyperlinks of miscellaneous contentsGit 常用的几种处理大型二进制文件的组件">
 
 
 
@@ -75,7 +72,7 @@
   };
 </script>
 
-  <title> 双系统重装Windows修复引导grub2 | Running </title>
+  <title> Some Hyperlinks | Running </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -195,7 +192,7 @@
             
             
               
-                双系统重装Windows修复引导grub2
+                Some Hyperlinks
               
             
           </h1>
@@ -204,8 +201,8 @@
         <div class="post-meta">
           <span class="post-time">
             發表於
-            <time itemprop="dateCreated" datetime="2016-05-15T00:24:50+08:00" content="2016-05-15">
-              2016-05-15
+            <time itemprop="dateCreated" datetime="2017-01-07T01:30:27+08:00" content="2017-01-07">
+              2017-01-07
             </time>
           </span>
 
@@ -228,14 +225,8 @@
       
 
       
-        <span itemprop="articleBody"><h6 id="OS_uFF1AopenSuSE_Leap-42-1_Win8"><a href="#OS_uFF1AopenSuSE_Leap-42-1_Win8" class="headerlink" title="OS：openSuSE Leap-42.1 Win8"></a>OS：openSuSE Leap-42.1 Win8</h6><p>　　双系统openSUSE42.1和Win7，想要把Win7换成Win8，安装Win8，会覆盖grub2引导。于是现在U盘上装了openSUSE42.1做启动盘，以便安装完win8后修复。<br>　　主要做法是，先挂载root，再把其他分区挂载到root下面，swap无须挂载。例如：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#root</span></span><br><span class="line">mount /dev/sdax /mnt</span><br><span class="line"></span><br><span class="line"><span class="comment">#boot</span></span><br><span class="line">mount /dev/sday /mnt/boot</span><br><span class="line"></span><br><span class="line"><span class="comment">#home</span></span><br><span class="line">mount /dev/sday /mnt/home</span><br></pre></td></tr></table></figure>
-<p>　　我用的是LVM，其实做法差不多，只不过应该在/dev/mapper下找对应分区。而boot分区并不在LVM中，所以boot挂载和上面一样。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#root</span></span><br><span class="line">mount /dev/mapper/XX-root /mnt</span><br><span class="line"></span><br><span class="line"><span class="comment">#home</span></span><br><span class="line">mount /dev/mapper/XX-home /mnt/home</span><br></pre></td></tr></table></figure>
-<p>　　之后执行：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mount -t proc proc /mnt.proc</span><br><span class="line">mount --rebind sys /mnt/sys</span><br><span class="line">mount --rebind dev /mnt/dev</span><br><span class="line"></span><br><span class="line">chroot /mnt /bin/bash</span><br></pre></td></tr></table></figure>
-<p>　　生成grub2文件：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">grub2-mkconfig -o /boot/grub2/grub.cfg</span><br><span class="line"></span><br><span class="line">grub2-install /dev/sda</span><br><span class="line"></span><br><span class="line"><span class="built_in">exit</span></span><br><span class="line">reboot</span><br></pre></td></tr></table></figure></span>
+        <span itemprop="articleBody"><h3 id="hyperlinks_of_miscellaneous_contents"><a href="#hyperlinks_of_miscellaneous_contents" class="headerlink" title="hyperlinks of miscellaneous contents"></a>hyperlinks of miscellaneous contents</h3><p><a href="http://www.oschina.net/news/71365/git-annex-lfs-bigfiles-fat-media-bigstore-sym" target="_blank" rel="external">Git 常用的几种处理大型二进制文件的组件</a></p>
+</span>
       
     </div>
 
@@ -243,9 +234,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/grub2/" rel="tag">#grub2</a>
+            <a href="/tags/links/" rel="tag">#links</a>
           
-            <a href="/tags/双系统/" rel="tag">#双系统</a>
+            <a href="/tags/miscellaneous/" rel="tag">#miscellaneous</a>
           
         </div>
       
@@ -254,17 +245,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/12/21/python-matplotlib后端设置/" rel="next" title="python-matplotlib后端设置">
-                <i class="fa fa-chevron-left"></i> python-matplotlib后端设置
+              <a href="/2016/12/24/gnuplot-plot-flashes-and-disspears/" rel="next" title="gnuplot: plot flashes and disspears">
+                <i class="fa fa-chevron-left"></i> gnuplot: plot flashes and disspears
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/05/16/从VCF文件中提取信息/" rel="prev" title="从VCF文件中提取信息">
-                从VCF文件中提取信息 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -378,7 +365,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#OS_uFF1AopenSuSE_Leap-42-1_Win8"><span class="nav-number">1.</span> <span class="nav-text">OS：openSuSE Leap-42.1 Win8</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#hyperlinks_of_miscellaneous_contents"><span class="nav-number">1.</span> <span class="nav-text">hyperlinks of miscellaneous contents</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
