@@ -54,7 +54,7 @@
 <meta name="description">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Running">
-<meta property="og:url" content="http://yoursite.com/tags/grub2/index.html">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="Running">
 <meta property="og:description">
 <meta name="twitter:card" content="summary">
@@ -71,7 +71,7 @@
   };
 </script>
 
-  <title> 標籤: grub2 | Running </title>
+  <title> Running </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -92,7 +92,9 @@
 
 
 
-  <div class="container one-column ">
+  <div class="container one-column 
+   page-home 
+">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -169,47 +171,110 @@
       <div class="main-inner">
         <div id="content" class="content">
           
+  <section id="posts" class="posts-expand">
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        grub2
-        <small>標籤</small>
-      </h2>
-    </div>
+    
+
+    
+    
+      
+      
+
+      
+    
 
     
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
 
-      <h1 class="post-title">
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2016/05/15/双系统重装Windows修复引导grub2/" itemprop="url">
-              
-                <span itemprop="name">双系统重装Windows修复引导grub2</span>
-              
-            </a>
         
-      </h1>
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/12/21/python-matplotlib后端设置/" itemprop="url">
+                  python-matplotlib后端设置
+                </a>
+              
+            
+          </h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-05-15T00:24:50+08:00"
-              content="2016-05-15" >
-          05-15
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2015-12-21T21:46:23+08:00" content="2015-12-21">
+              2015-12-21
+            </time>
+          </span>
 
-    </header>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h6 id="OS_uFF1AopenSuSE_Leap-42-1"><a href="#OS_uFF1AopenSuSE_Leap-42-1" class="headerlink" title="OS：openSuSE Leap-42.1"></a>OS：openSuSE Leap-42.1</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.ptplot <span class="keyword">as</span> plt</span><br></pre></td></tr></table></figure>
+<p>　　在使用python-matplotlib模块的时候遇到了一个问题，plt.show()函数无法正常输出图像。在网上找到解决方案为修改matplotlib的配置文件，原为Agg，将其backend设置为其他即可，如Qt4Agg，TkAgg。设为Qt4Agg没有问题，输出正常。</p>
+<p>　　之后因为需要将图像的输出设为动态交互式的，而将plt.show()改为plt.draw()。注意，使用draw()而非show()是因为后者生成的窗口无法调用close()主动关闭，而前者可以。若使用plt.draw()则需要打开interactive开关，即plt.ion()。但这时又出现了无法输出图像的问题，在网上找了很久没能解决，最后尝试着再次修改了backend为TkAgg，问题成功解决。</p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
   </article>
 
 
     
-  </div>
+
+  </section>
 
   
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
 
 
         </div>
@@ -328,12 +393,6 @@
 
   
   
-  
-    <script type="text/javascript">
-      postMotionOptions = {stagger: 100, drag: true};
-    </script>
-  
-
 
   
     

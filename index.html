@@ -209,6 +209,89 @@
             
               
                 
+                <a class="post-title-link" href="/2017/01/09/SSH-connect-to-host-port-22-Connection-refused/" itemprop="url">
+                  SSH connect to host *** port 22: Connection refused
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2017-01-09T16:39:43+08:00" content="2017-01-09">
+              2017-01-09
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h5 id="problem_3A"><a href="#problem_3A" class="headerlink" title="problem:"></a>problem:</h5><pre><code>SSH connect to host *** port 22: Connection refused
+</code></pre><h5 id="solution_3A"><a href="#solution_3A" class="headerlink" title="solution:"></a>solution:</h5><pre><code>start the sshd service
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service sshd start</span><br></pre></td></tr></table></figure>
+</code></pre>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/01/07/Some-Hyperlinks/" itemprop="url">
                   Some Hyperlinks
                 </a>
@@ -976,93 +1059,14 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/12/21/python-matplotlib后端设置/" itemprop="url">
-                  python-matplotlib后端设置
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            發表於
-            <time itemprop="dateCreated" datetime="2015-12-21T21:46:23+08:00" content="2015-12-21">
-              2015-12-21
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <h6 id="OS_uFF1AopenSuSE_Leap-42-1"><a href="#OS_uFF1AopenSuSE_Leap-42-1" class="headerlink" title="OS：openSuSE Leap-42.1"></a>OS：openSuSE Leap-42.1</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.ptplot <span class="keyword">as</span> plt</span><br></pre></td></tr></table></figure>
-<p>　　在使用python-matplotlib模块的时候遇到了一个问题，plt.show()函数无法正常输出图像。在网上找到解决方案为修改matplotlib的配置文件，原为Agg，将其backend设置为其他即可，如Qt4Agg，TkAgg。设为Qt4Agg没有问题，输出正常。</p>
-<p>　　之后因为需要将图像的输出设为动态交互式的，而将plt.show()改为plt.draw()。注意，使用draw()而非show()是因为后者生成的窗口无法调用close()主动关闭，而前者可以。若使用plt.draw()则需要打开interactive开关，即plt.ion()。但这时又出现了无法输出图像的问题，在网上找了很久没能解决，最后尝试着再次修改了backend为TkAgg，问题成功解决。</p>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
         </div>
@@ -1101,7 +1105,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-count">11</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
@@ -1115,7 +1119,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">14</span>
+              <span class="site-state-item-count">15</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>
